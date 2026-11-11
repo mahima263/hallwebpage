@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halls 16, 17 & 18</title>
+<meta name="description" content="Halls 16, 17 and 18 are the next chapter in IIT Kanpur's residential legacy. Explore naming opportunities and connect with us.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap">
+<style>
+/* Layout: alternating text / rendering bands on warm cream, diagonal-cut photos, lead form pinned in the banner. */
+:root{
+  --mahogany:#8e2a1e; --mahogany-deep:#6c1f15; --navy:#14344f; --amber:#e0752a; --gold:#f4c98b;
+  --cream:#fbf6f0; --champagne:#f6e9dc; --paper:#ffffff; --ink:#2b2622; --muted:#5d544d; --line:#e3c9b4;
+  --display:"Lato","Segoe UI",Arial,sans-serif; --body:"Lato","Segoe UI",Arial,sans-serif;
+  --wrap:1240px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--cream)}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.2}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.stack{display:flex;flex-direction:column;gap:14px}
+h2{font-size:clamp(1.45rem,1rem + 1.6vw,2rem);font-weight:700;color:var(--navy)}
+h2.red{color:var(--mahogany)}
+.copy{color:var(--ink);max-width:62ch}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 26px;border-radius:999px;border:1.5px solid var(--mahogany);background:var(--mahogany);color:#fff;font-family:var(--display);font-weight:700;font-size:.92rem;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:var(--mahogany-deep);border-color:var(--mahogany-deep);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--mahogany)}
+.btn.ghost:hover{background:var(--mahogany);color:#fff}
+.btn.light{background:var(--gold);border-color:var(--gold);color:var(--mahogany-deep)}
+.btn.light:hover{background:#fff;border-color:#fff}
+
+/* Header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(251,246,240,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(142,42,30,.12)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.navbar-brand{display:inline-flex;align-items:center;text-decoration:none;min-width:0}
+.navbar-logo{height:52px;width:auto}
+.site-header .btn{min-height:40px;padding:8px 20px;font-size:.85rem;flex:none}
+
+/* Banner */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--champagne)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 100%;z-index:-2;filter:sepia(.22) saturate(1.05)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--cream) 0%,rgba(251,246,240,.93) 24%,rgba(251,246,240,.5) 42%,rgba(251,246,240,.1) 60%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,660px);gap:44px;align-items:center;padding-block:40px 48px}
+.hero h1{font-size:clamp(2.2rem,1.2rem + 3.2vw,3.3rem);font-weight:900;color:var(--mahogany);letter-spacing:-.01em}
+.hero h1::after{content:"";display:block;width:64px;height:3px;background:var(--amber);margin-top:16px}
+.hero .tag{font-family:var(--display);font-weight:700;color:var(--navy);font-size:clamp(1.1rem,.85rem + .9vw,1.4rem);line-height:1.3;margin-top:18px}
+.hero .tag span{display:block}
+.hero .sub{margin-top:14px;font-size:1.02rem;color:var(--ink)}
+
+
+/* Lead form card: the page's main job */
+.lead-card{background:#f7e6d3;border-radius:16px;overflow:hidden;box-shadow:0 22px 54px rgba(60,20,10,.3);outline:1px solid rgba(142,42,30,.14);scroll-margin-top:96px}
+.lead-card iframe{display:block;width:100%;height:690px;border:0;transition:height .25s ease}
+.lead-card .alt{display:block;text-align:center;font-size:.82rem;color:var(--muted);padding:4px 12px 12px}
+.mock{display:flex;flex-direction:column;gap:10px;padding:0 22px 20px}
+.mock h2{margin:0 -22px 8px;padding:22px;background:#3d1f19;color:#fff;font-size:1.3rem;text-align:center}
+.mock .field{min-height:44px;padding:10px 12px;border:1px solid #3d1f19;border-radius:7px;background:#fff;color:#6f655d;font-size:.95rem}
+.mock .btn{width:100%;margin-top:4px}
+.mock small{font-size:.84rem;line-height:1.4;color:var(--mahogany)}
+.sticky-cta{display:none}
+
+/* Enquiry drawer: opens the form from any Connect With Us button without losing the reader's place */
+.drawer{margin:0 0 0 auto;width:min(700px,100vw);max-width:none;height:100%;max-height:none;border:0;padding:0;background:#f7e6d3;color:var(--ink);overflow-y:auto;overscroll-behavior:contain;box-shadow:-18px 0 50px rgba(40,12,6,.35)}
+.drawer::backdrop{background:rgba(40,12,6,.55)}
+.drawer[open]{animation:drawer-in .32s cubic-bezier(.2,.7,.2,1)}
+@keyframes drawer-in{from{transform:translateX(100%)}to{transform:none}}
+.drawer-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px 20px;background:var(--mahogany);color:#fff;font-family:var(--display);font-weight:700;font-size:.95rem}
+.drawer-close{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.6);background:transparent;color:#fff;font-size:1.3rem;line-height:1;cursor:pointer;transition:background .2s,transform .2s}
+.drawer-close:hover{background:rgba(255,255,255,.18);transform:rotate(90deg)}
+.drawer .lead-card{border-radius:0;box-shadow:none;outline:0}
+
+/* Scroll reveal (data-aos), only switched on by script and never for reduced-motion */
+.aos-on [data-aos]{opacity:0;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.aos-on [data-aos="fade-up"]{transform:translateY(28px)}
+.aos-on [data-aos="fade-right"]{transform:translateX(-36px)}
+.aos-on [data-aos="fade-left"]{transform:translateX(36px)}
+.aos-on [data-aos="zoom-in"]{transform:scale(.9)}
+.aos-on [data-aos].aos-in{opacity:1;transform:none}
+section,footer{overflow-x:clip}
+
+/* Hover (pointer devices only) */
+@media (hover:hover){
+  .btn:hover{box-shadow:0 8px 20px rgba(110,31,22,.28)}
+  .feat-grid li{transition:background .25s,color .25s}
+  .feat-grid svg{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+  .feat-grid li:hover{background:var(--champagne);color:var(--mahogany-deep)}
+  .feat-grid li:hover svg{transform:translateY(-4px) scale(1.1)}
+  .tiers li{position:relative;border-radius:10px;transition:background .25s,transform .25s,box-shadow .25s}
+  .tiers li:hover{background:#fff;transform:translateY(-6px);box-shadow:0 14px 30px rgba(110,31,22,.18);z-index:1}
+  .tier-link{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;text-decoration:none;transition:background-size .25s}
+  .tiers li:hover .tier-link,.tier-link:hover{background-size:100% 1.5px}
+  .split .photo img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+  .split .photo:hover img{transform:scale(1.06)}
+  .stats div{transition:transform .25s}
+  .stats div:hover{transform:translateY(-3px)}
+  .sketch{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .sketch:hover{transform:scale(1.03)}
+  .navbar-logo{transition:opacity .2s}
+  .navbar-brand:hover .navbar-logo{opacity:.75}
+}
+
+/* Intro */
+.intro{background:var(--paper)}
+.intro .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;align-items:center;padding-block:44px}
+.intro .copy{border-left:2px solid var(--amber);padding-left:20px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.sketch{width:100%;height:auto}
+
+/* Split bands with diagonal photo */
+.split{position:relative;overflow:hidden;background:var(--cream)}
+.split .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;min-height:340px}
+.split .text{padding-block:48px}
+.split .photo{position:absolute;top:0;bottom:0;right:0;width:56%;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)}
+.split .photo img{width:100%;height:100%;object-fit:cover;filter:sepia(.18)}
+.split .text{grid-column:1;max-width:440px;position:relative;z-index:1}
+
+/* Growing + features */
+.grow{background:var(--paper)}
+.grow .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0;padding-block:52px}
+.grow .text{padding-right:40px}
+.grow .text ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.grow .text li{position:relative;padding-left:22px}
+.grow .text li::before{content:"";position:absolute;left:4px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--mahogany)}
+.grow .lede{font-weight:700;color:var(--navy)}
+.grow .small{font-size:.92rem;color:var(--muted)}
+.features{border-left:1.5px solid var(--amber);padding-left:40px}
+.features h2{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:22px}
+.features h2::before,.features h2::after{content:"";flex:1;height:1.5px;background:var(--amber)}
+.feat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);margin:0;padding:0;list-style:none}
+.feat-grid li{background:var(--paper);padding:14px 8px 16px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-size:.84rem;line-height:1.3;color:var(--ink)}
+.feat-grid svg{width:36px;height:36px;fill:none;stroke:var(--mahogany);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* Hall 15 */
+.hall15{background:var(--cream)}
+.hall15 .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:center;padding-block:40px}
+.hall15 h2 span{display:block}
+.hall15 h2::after{content:"";display:block;width:56px;height:3px;background:var(--amber);margin-top:12px}
+
+/* Home for tomorrow */
+.stats{display:grid;grid-template-columns:repeat(3,auto);gap:0;margin:8px 0 0;padding:0}
+.stats div{padding:4px 22px;border-left:1.5px solid var(--line)}
+.stats div:first-child{padding-left:0;border-left:0}
+.stats dt{font-family:var(--display);font-weight:700;color:var(--mahogany);font-size:1.15rem;white-space:nowrap}
+.stats dd{margin:2px 0 0;font-size:.85rem;color:var(--muted)}
+.home .text{max-width:520px}
+.home .photo{width:46%}
+.home .foot{font-size:.88rem;color:var(--muted)}
+
+/* Naming */
+.naming{background:var(--paper)}
+.naming .wrap{padding-block:48px;text-align:center}
+.naming .copy{margin:10px auto 0}
+.tiers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:26px 0 0;padding:0;list-style:none;background:var(--champagne);border-radius:10px}
+.tiers li{padding:22px 18px;display:flex;flex-direction:column;gap:4px;align-items:center;border-left:1.5px solid var(--line)}
+.tiers li:first-child{border-left:0}
+.tiers .amt{font-family:var(--display);font-weight:700;color:var(--mahogany);font-size:1.5rem;font-variant-numeric:tabular-nums}
+.tiers h3{font-size:.95rem;color:var(--mahogany);font-weight:700}
+.tiers p{font-size:.9rem;line-height:1.4;max-width:24ch}
+
+/* Closing band */
+
+.tier-link{margin-top:auto;padding-top:8px;font-family:var(--display);font-weight:700;font-size:.86rem;color:var(--mahogany);text-underline-offset:3px}
+.naming .btn{margin-top:26px}
+
+/* Closing band */
+.closing{background:var(--mahogany-deep);color:#fff;position:relative;overflow:hidden}
+.closing .sketch-bg{position:absolute;left:-40px;bottom:0;width:min(330px,40%);opacity:.5;pointer-events:none}
+.closing .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) auto;gap:36px;align-items:center;padding-block:56px}
+.closing .text{display:flex;flex-direction:column;gap:10px;padding-left:clamp(0px,15vw,190px)}
+.closing h2{color:#fff;font-size:clamp(1.4rem,1.1rem + 1vw,1.75rem)}
+.closing .text p{color:#f3e3d6}
+.closing .motto{font-family:var(--display);font-style:italic;font-weight:700;color:var(--gold);font-size:1.25rem;padding:16px 0 16px 32px;border-left:1.5px solid rgba(244,201,139,.5)}
+.closing .cta{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding-left:32px;border-left:1.5px solid rgba(244,201,139,.5)}
+.closing .cta strong{font-family:var(--display);font-weight:700}
+.closing .cta small{font-size:.88rem;color:#f3e3d6;max-width:26ch;line-height:1.4}
+
+/* Tablet */
+@media (max-width:960px){
+  .grow .wrap{grid-template-columns:minmax(0,1fr);gap:36px}
+  .closing .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+  .closing .text{grid-column:1/-1;padding-left:0}
+  .closing .motto{border-left:0;padding-left:0}
+  .closing .sketch-bg{left:auto;right:-20px;top:0;bottom:auto;opacity:.25}
+  .split .wrap{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
+  .split .text{max-width:none;padding-block:40px 26px}
+  .split .photo,.home .photo{position:static;width:auto;clip-path:none;aspect-ratio:16/8;margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px)))}
+  .grow .text{padding-right:0}
+  .features{border-left:0;padding-left:0}
+  .tiers{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tiers li:nth-child(3){border-left:0}
+  .tiers li:nth-child(n+3){border-top:1.5px solid var(--line)}
+}
+@media (max-width:1100px){
+  .hero::before{background:linear-gradient(180deg,var(--cream) 0%,rgba(251,246,240,.9) 30%,rgba(251,246,240,.4) 60%,rgba(251,246,240,.15) 100%)}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:22px;padding-block:28px 72px}
+  .hero .lead-card{width:100%;max-width:700px;margin-inline:auto}
+  .hero .intro-text{max-width:700px;margin-inline:auto;width:100%}
+}
+@media (max-width:640px){.lead-card iframe{height:800px}}
+/* Phone */
+@media (max-width:720px){
+  html{scroll-padding-top:72px}
+  .navbar-logo{height:42px}
+  .site-header .btn{padding:8px 14px;font-size:.8rem}
+  .intro .wrap,.hall15 .wrap{grid-template-columns:minmax(0,1fr);gap:20px;padding-block:36px}
+  .hall15 .sketch{order:2}
+  .split .wrap{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
+  .split .text{max-width:none;padding-block:36px 24px}
+  .split .photo,.home .photo{position:static;width:auto;clip-path:none;aspect-ratio:16/9;margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px)))}
+  .stats{grid-template-columns:minmax(0,1fr);gap:12px}
+  .stats div{padding:0 0 0 14px;border-left:3px solid var(--amber)}
+  .stats div:first-child{padding-left:14px;border-left:3px solid var(--amber)}
+  .feat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .actions .btn{flex:1 1 140px;padding-inline:14px}
+  .closing .wrap{grid-template-columns:minmax(0,1fr);gap:18px;padding-block:40px calc(88px + env(safe-area-inset-bottom,0px))}
+  .closing .motto{padding-block:0}
+  .closing .cta{border-left:0;padding-left:0;align-items:flex-start;text-align:left}
+  .closing .btn{white-space:normal;text-align:center}
+  .hero .wrap{padding-block:22px 90px;gap:18px}
+  .hero h1::after{margin-top:10px}
+  .hero .tag{margin-top:12px}
+  .hero .sub{display:none}
+  .sticky-cta{display:flex;position:fixed;z-index:55;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));box-shadow:0 10px 26px rgba(60,20,10,.4)}
+}
+@media (max-width:420px){
+  .tiers{grid-template-columns:minmax(0,1fr)}
+  .tiers li{border-left:0}
+  .tiers li:nth-child(n+2){border-top:1.5px solid var(--line)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="navbar-brand" href="#top">
+      <img src="images/iitk-gtu-logo.png" class="navbar-logo" alt="IIT Kanpur | Greater Than Us" width="362" height="164">
+    </a>
+    <a class="btn" href="#connect" data-open-form>Connect With Us</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <img class="hero-bg" src="images/halls-front.jpg" alt="Architect's rendering of Halls 16, 17 and 18, seen from the approach road" fetchpriority="high">
+  <div class="wrap">
+    <div class="intro-text">
+      <h1>Halls 16, 17 &amp; 18</h1>
+      <p class="tag"><span>The Halls That Hold Our Memories.</span><span>The Halls That Will Shape Their Future.</span></p>
+      <p class="sub">A legacy of belonging. A future of opportunity.</p>
+    </div>
+    <div class="lead-card" id="connect">
+      <iframe class="zf-frame" aria-label="Start A Conversation" title="Start A Conversation" src="https://forms.zohopublic.in/iitkanpurdf1/form/HallofResidenceNamingOpportunity/formperma/2fveQyLb3pCO24vOPT5mT83xBQ9Qt6JHExmPIRi80a8?zf_rszfm=1"></iframe>
+      <a class="alt" href="https://zfrmz.in/h16VaVXHVPVsW64VezWJ" target="_blank" rel="noopener">Form not loading? Open it in a new tab</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div data-aos="fade-right">
+      <div class="copy stack">
+        <p>For generations of IIT Kanpur alumni, the halls of residence have been more than buildings. They have been home to friendships, unforgettable experiences and memories that last a lifetime.</p>
+        <p>Today, we have an opportunity to create that same sense of belonging for generations to come.</p>
+        <p>Halls 16, 17 and 18 are the next chapter in IIT Kanpur’s residential legacy. Be a part of building a home where future IITians will learn, grow and create their own stories.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#connect" data-open-form>Connect With Us</a>
+        <a class="btn ghost" href="#legacy">Explore More</a>
+      </div>
+    </div>
+    <img class="sketch" data-aos="fade-left" src="images/sketch-front.webp" alt="" width="1300" height="411" loading="lazy">
+  </div>
+</section>
+
+<section class="split" id="legacy">
+  <div class="wrap">
+    <div class="text stack" data-aos="fade-right">
+      <h2>A Legacy Built to Last</h2>
+      <p>Halls 1 and 2 have stood the test of time, becoming an enduring part of the IIT Kanpur experience.</p>
+      <p>They remind us that a hall of residence is more than a structure. It is a community, a shared experience and a home that stays with you long after graduation.</p>
+      <p>With Halls 16, 17 and 18, we carry this spirit forward, building spaces that will serve and inspire generations of IITians for decades to come.</p>
+    </div>
+    <div class="photo" data-aos="fade-left"><img src="images/halls-aerial-1.jpg" alt="Aerial rendering of the four residential towers and supporting blocks" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="grow">
+  <div class="wrap">
+    <div class="text stack" data-aos="fade-up">
+      <h2>Building for a Growing IIT Kanpur</h2>
+      <p>As IIT Kanpur continues to grow, so does the need for modern residential infrastructure that supports a vibrant campus life.</p>
+      <p class="lede">Halls 16, 17 and 18 will provide:</p>
+      <ul>
+        <li>Contemporary residential facilities for students.</li>
+        <li>Spaces that foster community and collaboration.</li>
+        <li>Essential amenities for a fulfilling residential experience.</li>
+      </ul>
+      <p class="small">This is an investment in the IITK experience and the generations who will shape its future.</p>
+    </div>
+    <div class="features" data-aos="fade-up">
+      <h2>Key Features</h2>
+      <ul class="feat-grid">
+        <li data-aos="zoom-in" data-aos-delay="0"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="8" rx="2"/><path d="M6.5 10h11M8 16v2M12 16v3M16 16v2"/></svg>Centralised AC rooms, ergonomic furniture, personal storage</li>
+        <li data-aos="zoom-in" data-aos-delay="70"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 15.8a5 5 0 0 1 6.8 0"/><circle cx="12" cy="19" r=".9"/></svg>High-speed Wi-Fi throughout the hall of residence</li>
+        <li data-aos="zoom-in" data-aos-delay="140"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a2 2 0 0 0 4 0V3M8 3v18M17 3c-2 2-3 5-3 8h3v10"/></svg>Dining &amp; Canteen Facilities</li>
+        <li data-aos="zoom-in" data-aos-delay="210"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13.5" r="4.2"/><path d="M7 6.5h.01M10 6.5h.01"/></svg>Laundry facilities with drying rooms</li>
+        <li data-aos="zoom-in" data-aos-delay="280"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h5.5A2.5 2.5 0 0 1 11 7.500V20a2 2 0 0 0-2-2H3zM21 5h-5.500A2.5 2.5 0 0 0 13 7.500V20a2 2 0 0 1 2-2h6z"/></svg>Study Rooms &amp; Workspaces for quiet academic focus</li>
+        <li data-aos="zoom-in" data-aos-delay="0"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5.5" r="2.3"/><path d="M5.5 8l6.5 3 6.5-3M12 11v5M8.5 21l3.5-5 3.5 5"/></svg>Recreation Areas</li>
+        <li data-aos="zoom-in" data-aos-delay="70"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3zM6 18v2M18 18v2"/></svg>Smart Lounges with social &amp; collaborative spaces</li>
+        <li data-aos="zoom-in" data-aos-delay="140"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 16.500h18M5.5 11V7.500a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2V11"/></svg>Guest Rooms for parents and visitors</li>
+        <li data-aos="zoom-in" data-aos-delay="210"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M12 8.500c1.6 1.5 2.6 2.9 2.6 4.400a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.6 1-2.2.2 1 .7 1.3 1 1.2-.300-1.2 0-2.3.600-3.400z"/></svg>Fire &amp; Safety Compliance</li>
+        <li data-aos="zoom-in" data-aos-delay="280"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="1.7"/><path d="M5 8.500l7 1.5 7-1.500M12 10v5M9 21l3-6 3 6"/></svg>Accessibility-friendly design</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="hall15">
+  <div class="wrap">
+    <img class="sketch" data-aos="fade-right" src="images/sketch-aerial.webp" alt="" width="1200" height="640" loading="lazy">
+    <div class="stack" data-aos="fade-left">
+      <h2><span>From One Generation to the Next:</span><span>The Story of Hall 15</span></h2>
+      <p>The success of Hall 15, IIT Kanpur’s residential hall for women, is a testament to what alumni support can achieve.</p>
+      <p>Now nearing completion, Hall 15 reflects a shared commitment to creating better residential opportunities for students.</p>
+      <p>With Halls 16, 17 and 18, the journey continues. And you can be a part of it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="split home">
+  <div class="wrap">
+    <div class="text stack" data-aos="fade-right">
+      <h2 class="red">A Home for Tomorrow’s IITians: Halls 16, 17 &amp; 18</h2>
+      <p>A thoughtfully planned residential development designed to enrich student life and serve IIT Kanpur for decades.</p>
+      <dl class="stats">
+        <div><dt>₹120 Crore</dt><dd>Total Construction Cost</dd></div>
+        <div><dt>2 Blocks, 4 Towers</dt><dd>Residential Infrastructure</dd></div>
+        <div><dt>2 Blocks</dt><dd>Supporting Infrastructure</dd></div>
+      </dl>
+      <p class="foot">Cafeteria, guest rooms, meeting rooms and other facilities.</p>
+    </div>
+    <div class="photo" data-aos="fade-left"><img src="images/halls-aerial-2.jpg" alt="Aerial rendering of the Halls 16, 17 and 18 site with its ring road and central block" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="naming" id="naming">
+  <div class="wrap">
+    <h2 class="red">Make Your Mark on the IITK Story</h2>
+    <p class="copy">Create a lasting connection with your alma mater. Support Halls 16, 17 and 18 through a range of naming opportunities.</p>
+    <ul class="tiers">
+      <li data-aos="fade-up" data-aos-delay="0"><span class="amt">₹60 Cr</span><p>A defining contribution to IITK’s residential legacy.</p><a class="tier-link" href="#connect" data-open-form>Enquire</a></li>
+      <li data-aos="fade-up" data-aos-delay="90"><span class="amt">₹15 Cr</span><h3>Tower Naming</h3><p>Create a lasting association with a residential tower.</p><a class="tier-link" href="#connect" data-open-form>Enquire</a></li>
+      <li data-aos="fade-up" data-aos-delay="180"><span class="amt">₹2 Cr</span><h3>Floor Naming</h3><p>Support a space that will be part of everyday student life.</p><a class="tier-link" href="#connect" data-open-form>Enquire</a></li>
+      <li data-aos="fade-up" data-aos-delay="270"><span class="amt">₹10 Lakh</span><h3>Room Naming</h3><p>Create a personal connection with a future IITian’s home.</p><a class="tier-link" href="#connect" data-open-form>Enquire</a></li>
+    </ul>
+    <a class="btn" href="#connect" data-open-form>Connect With Us</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="closing">
+  <img class="sketch-bg" src="images/sketch-footer.webp" alt="">
+  <div class="wrap">
+    <div class="text" data-aos="fade-right">
+      <h2>The Next Chapter Belongs to Us</h2>
+      <p>You once called IIT Kanpur home. Now, you have an opportunity to help create that same experience for the next generation.</p>
+      <p>Let us build spaces that will inspire, nurture and bring students together for decades to come.</p>
+    </div>
+    <p class="motto" data-aos="fade-up">Let us build the future, together.</p>
+    <div class="cta" data-aos="fade-left">
+      <a class="btn light" href="#connect" data-open-form>Connect With Us to Know More</a>
+      <strong>Be a Part of This Journey</strong>
+      <small>Your contribution can help shape the future of IIT Kanpur’s residential life.</small>
+    </div>
+  </div>
+</footer>
+
+<a class="btn sticky-cta" href="#connect" id="sticky-cta" data-open-form hidden>Connect With Us</a>
+
+<dialog class="drawer" id="lead-drawer" aria-label="Start a conversation">
+  <div class="drawer-bar"><span>Halls 16, 17 &amp; 18</span><button class="drawer-close" type="button" id="drawer-close" aria-label="Close the form">&times;</button></div>
+    <div class="lead-card" id="connect-drawer">
+      <iframe class="zf-frame" aria-label="Start A Conversation" title="Start A Conversation" data-src="https://forms.zohopublic.in/iitkanpurdf1/form/HallofResidenceNamingOpportunity/formperma/2fveQyLb3pCO24vOPT5mT83xBQ9Qt6JHExmPIRi80a8?zf_rszfm=1"></iframe>
+      <a class="alt" href="https://zfrmz.in/h16VaVXHVPVsW64VezWJ" target="_blank" rel="noopener">Form not loading? Open it in a new tab</a>
+    </div>
+</dialog>
+
+<script>
+(function(){
+  var doc=document, $$=function(s){return Array.prototype.slice.call(doc.querySelectorAll(s))};
+
+  /* 1. Zoho auto-height: the form posts "formperma|height" messages; size every matching iframe so the form never scrolls inside its card. */
+  window.addEventListener('message',function(ev){
+    var d=ev.data; if(!d||d.constructor!==String)return;
+    var parts=d.split('|'); if(parts.length!==2&&parts.length!==3)return;
+    var h=parseInt(parts[1],10); if(!h)return;
+    $$('iframe.zf-frame').forEach(function(f){
+      var src=f.getAttribute('src')||f.getAttribute('data-src')||'';
+      if(src.indexOf(parts[0])>0)f.style.height=(h+15)+'px';
+    });
+  },false);
+
+  /* 2. Enquiry drawer: every [data-open-form] button opens the form in place. Falls back to the banner form if <dialog> is unsupported. */
+  var drawer=doc.getElementById('lead-drawer');
+  if(drawer&&typeof drawer.showModal==='function'){
+    $$('[data-open-form]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        var f=drawer.querySelector('iframe[data-src]');
+        if(f){f.src=f.getAttribute('data-src');f.removeAttribute('data-src')}
+        drawer.showModal();
+      });
+    });
+    doc.getElementById('drawer-close').addEventListener('click',function(){drawer.close()});
+    drawer.addEventListener('click',function(e){if(e.target===drawer)drawer.close()});
+  }
+
+  /* 3. Phone: keep Connect With Us on screen whenever no form is in view. */
+  var bar=doc.getElementById('sticky-cta');
+  if(bar&&'IntersectionObserver' in window){
+    var seen=new Set();
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){en.isIntersecting?seen.add(en.target):seen.delete(en.target)});
+      bar.hidden=seen.size>0;
+    },{threshold:.1});
+    $$('main .lead-card, .closing .cta').forEach(function(c){io.observe(c)});
+  }
+
+  /* 4. Scroll reveal for [data-aos]; content stays visible if this never runs. */
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    doc.documentElement.classList.add('aos-on');
+    var ro=new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target,delay=parseInt(el.getAttribute('data-aos-delay')||0,10);
+        el.style.transitionDelay=delay+'ms'; el.classList.add('aos-in'); ro.unobserve(el);
+        setTimeout(function(){el.style.transitionDelay=''},delay+750);
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.12});
+    $$('[data-aos]').forEach(function(el){ro.observe(el)});
+  }
+})();
+</script>
+
+</body>
+</html>
