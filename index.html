@@ -12,7 +12,7 @@
 <style>
 /* Layout: photo banner with headline only, then About + lead form side by side, then alternating content bands. */
 :root{
-  --mahogany:#8e2a1e; --mahogany-deep:#6c1f15; --navy:#14344f; --amber:#e0752a; --gold:#f4c98b;
+  --mahogany:#ab4531; --mahogany-deep:#8c3525; --navy:#14344f; --gold:#f4c98b;
   --cream:#fbf6f0; --champagne:#f6e9dc; --paper:#ffffff; --ink:#2b2622; --muted:#5d544d; --line:#e3c9b4; --olive:#798478;
   --display:"Lato","Segoe UI",Arial,sans-serif; --body:"Lato","Segoe UI",Arial,sans-serif;
   --wrap:1800px; --gutter:clamp(20px,4vw,64px);
@@ -20,7 +20,7 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:clamp(1.0625rem,1rem + .3vw,1.1875rem);line-height:1.65;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--cream)}
 img{display:block;max-width:100%}
 button,input,select,textarea{font:inherit}
@@ -28,7 +28,7 @@ button,input,select,textarea{font:inherit}
 h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.2}
 p{margin:0}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
 .wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
 .stack{display:flex;flex-direction:column;gap:14px}
 h2{font-size:clamp(1.45rem,1rem + 1.6vw,2rem);font-weight:700;color:var(--navy)}
@@ -36,7 +36,7 @@ h2.red{color:var(--mahogany)}
 .copy{color:var(--ink);max-width:62ch}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 26px;border-radius:999px;border:1.5px solid var(--mahogany);background:var(--mahogany);color:#fff;font-family:var(--display);font-weight:700;font-size:.92rem;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 26px;border-radius:12px;border:1.5px solid var(--mahogany);background:var(--mahogany);color:#fff;font-family:var(--display);font-weight:700;font-size:.92rem;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .2s,color .2s,transform .2s}
 .btn:hover{background:var(--mahogany-deep);border-color:var(--mahogany-deep);transform:translateY(-1px)}
 .btn.ghost{background:transparent;color:var(--mahogany)}
 .btn.ghost:hover{background:var(--mahogany);color:#fff}
@@ -54,8 +54,8 @@ h2.red{color:var(--mahogany)}
 .lead-card iframe{display:block;width:100%;height:690px;border:0;transition:height .25s ease}
 .lead-card .alt{display:block;text-align:center;font-size:.82rem;color:var(--muted);padding:4px 12px 12px}
 .mock{display:flex;flex-direction:column;gap:10px;padding:0 22px 20px}
-.mock h2{margin:0 -22px 8px;padding:22px;background:#3d1f19;color:#fff;font-size:1.3rem;text-align:center}
-.mock .field{min-height:44px;padding:10px 12px;border:1px solid #3d1f19;border-radius:7px;background:#fff;color:#6f655d;font-size:.95rem}
+.mock h2{margin:0 -22px 8px;padding:22px;background:#421f19;color:#fff;font-size:1.3rem;text-align:center}
+.mock .field{min-height:44px;padding:10px 12px;border:1px solid #421f19;border-radius:7px;background:#fff;color:#6f655d;font-size:.95rem}
 .mock .btn{width:100%;margin-top:4px}
 .mock small{font-size:.84rem;line-height:1.4;color:var(--mahogany)}
 .sticky-cta{display:none}
@@ -74,8 +74,8 @@ h2.red{color:var(--mahogany)}
 section,footer{overflow-x:clip}
 
 /* Shared */
-.eyebrow{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
-.rule::after{content:"";display:block;width:56px;height:3px;background:var(--amber);margin-top:12px}
+.eyebrow{font-family:var(--display);font-weight:900;font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
+.rule::after{content:"";display:block;width:56px;height:3px;background:var(--mahogany);margin-top:12px}
 .center{text-align:center}.center .rule::after,.center.rule::after{margin-inline:auto}
 .lede{font-family:var(--display);font-weight:700;color:var(--navy);font-size:1.12rem;line-height:1.35}
 
@@ -85,11 +85,14 @@ section,footer{overflow-x:clip}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--cream) 0%,rgba(251,246,240,.94) 30%,rgba(251,246,240,.6) 50%,rgba(251,246,240,0) 72%)}
 .hero .wrap{display:flex;align-items:center;min-height:clamp(340px,40vw,500px);padding-block:44px}
 .hero .intro-text{max-width:600px}
-.hero h1{font-size:clamp(1.75rem,1rem + 2.6vw,2.9rem);font-weight:900;letter-spacing:-.01em;margin-top:10px}
-.hero h1 span{display:block}
-.hero h1 span:first-child{color:var(--mahogany)}
-.hero h1 span:last-child{color:var(--navy);margin-top:.18em}
-.hero h1::after{content:"";display:block;width:64px;height:3px;background:var(--amber);margin-top:18px}
+.hero h1{font-size:clamp(1.75rem,1rem + 2.6vw,2.9rem);font-weight:900;letter-spacing:-.01em}
+.hero h1>span{display:block}
+.hero h1>span:first-child{color:var(--mahogany)}
+.hero h1>span:last-child{color:var(--navy);margin-top:.18em}
+/* Headline reveal: each word sits in a clipping box and slides up into it */
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+.hero h1 .wi{display:inline-block;will-change:transform}
+.hero h1::after{content:"";display:block;width:64px;height:3px;background:var(--mahogany);margin-top:18px;transform:scaleX(var(--rule,1));transform-origin:left}
 
 /* About + lead form */
 .about{background:var(--paper)}
@@ -99,7 +102,7 @@ section,footer{overflow-x:clip}
 .about .collage-wrap{grid-column:1;grid-row:2;align-self:stretch;min-height:300px}
 .about .text{display:flex;flex-direction:column;gap:14px}
 .about .text p{max-width:72ch}
-.lead-head{margin:0;padding:20px 22px;background:#3d1f19;color:#fff;font-size:clamp(1.1rem,.95rem + .6vw,1.35rem);text-align:center}
+.lead-head{margin:0;padding:20px 22px;background:#421f19;color:#fff;font-size:clamp(1.1rem,.95rem + .6vw,1.35rem);text-align:center}
 .collage{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:100%}
 .collage img{width:100%;height:100%;object-fit:cover;border-radius:10px;filter:sepia(.12)}
 .collage img:first-child{grid-row:1/3}
@@ -107,47 +110,50 @@ section,footer{overflow-x:clip}
 /* Foundation + challenges */
 .foundation{background:var(--cream)}
 .foundation .wrap{padding-block:56px}
-.found-head{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-.found-head h2{font-size:clamp(1.6rem,1.1rem + 1.9vw,2.3rem)}
-.found-head h2::after{content:"";display:block;width:56px;height:3px;background:var(--amber);margin:14px auto 0}
-.found-head .lead{font-size:1.05rem;line-height:1.65;max-width:62ch;margin-top:4px}
-@media (min-width:1180px){.found-head .lead{max-width:none}.found-head .lead span{display:block;white-space:nowrap}}
-.challenge-title{margin-top:48px;padding-top:36px;border-top:1px solid var(--line);font-size:clamp(1.2rem,1rem + .8vw,1.5rem);color:var(--mahogany);font-weight:700;text-align:center}
+.found-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(18px,2vw,26px) clamp(22px,3vw,44px);align-items:center;background:var(--mahogany);color:#fff;border-radius:16px;padding:clamp(26px,3vw,44px) clamp(22px,3.5vw,56px);box-shadow:0 16px 36px rgba(110,31,22,.2)}
+.found-mark{width:clamp(104px,8.5vw,136px);height:auto}
+.found-text{display:flex;flex-direction:column;gap:10px}
+.found-head h2{color:#fff;font-size:clamp(1.6rem,1.1rem + 1.9vw,2.3rem)}
+.found-sub{font-family:var(--display);font-weight:700;color:var(--gold);font-size:clamp(1.05rem,.95rem + .5vw,1.3rem);line-height:1.3}
+.found-sub::after{content:"";display:block;width:56px;height:3px;background:var(--gold);margin-top:14px}
+.found-head .lead{grid-column:1/-1;color:#f8ece2;font-size:clamp(1.0625rem,1rem + .3vw,1.1875rem);line-height:1.65;padding-top:clamp(16px,1.8vw,24px);border-top:1px solid rgba(244,201,139,.35)}
+@media (min-width:1440px){.found-head .lead{white-space:nowrap;font-size:min(1.06vw,1.1875rem)}}
+.challenge-title{margin-top:44px;font-size:clamp(1.2rem,1rem + .8vw,1.5rem);color:var(--mahogany);font-weight:700;text-align:center}
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:24px 0 0;padding:0;list-style:none}
 .cards li{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--mahogany);border-radius:10px;padding:22px 20px;display:flex;flex-direction:column;gap:8px}
 .cards svg{width:38px;height:38px;fill:none;stroke:var(--mahogany);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.cards h4{margin:4px 0 0;font-family:var(--display);font-size:1.05rem;color:var(--navy);line-height:1.25}
-.cards p{font-size:.95rem;line-height:1.5;color:var(--ink)}
+.cards h4{margin:4px 0 0;font-family:var(--display);font-size:1.15rem;color:var(--navy);line-height:1.25}
+.cards p{font-size:1.04rem;line-height:1.55;color:var(--ink)}
 .belong{margin-top:32px;text-align:center;font-family:var(--display);font-style:italic;font-weight:700;font-size:clamp(1.1rem,.95rem + .7vw,1.4rem);color:var(--mahogany)}
 
-/* Hall 15 */
-.hall15{background:var(--olive);color:#fff}
-.hall15 .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center;padding-block:56px}
-.hall15 .stat{text-align:center;padding:10px 0;border-right:1.5px solid rgba(255,255,255,.55);padding-right:48px}
-.hall15 .num{display:block;font-family:var(--display);font-weight:900;font-size:clamp(4rem,2.5rem + 6vw,7rem);line-height:1;color:#fff;font-variant-numeric:tabular-nums}
-.hall15 .stat span:last-child{display:block;margin-top:10px;font-family:var(--display);font-weight:700;font-size:1.1rem;line-height:1.35}
-.hall15 h2{color:#fff}
-.hall15 p{color:#fff;font-size:1.05rem}
-.hall15 .eyebrow{color:#fff;font-size:.8rem}
-.hall15 .stat{font-size:1rem}
-.hall15 .next{font-family:var(--display);font-weight:900;color:#fff}
+/* Hall 15: quiet photo + text band */
+.hall15{background:var(--champagne)}
+.hall15 .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center;padding-block:56px}
+.h15-photo{margin:0;position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/10;box-shadow:0 16px 36px rgba(60,20,10,.18)}
+.h15-photo img{width:100%;height:100%;object-fit:cover;filter:sepia(.18)}
+.hall15 p{font-size:clamp(1.0625rem,1rem + .3vw,1.1875rem);max-width:62ch}
+.hall15 .h15-fact{font-family:var(--display);font-weight:700;color:var(--navy)}
+.hall15 .next{font-family:var(--display);font-weight:700;color:var(--mahogany)}
 
-/* Split band with diagonal rendering */
-.split{position:relative;overflow:hidden;background:var(--cream)}
-.split .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;min-height:400px}
-.split .text{grid-column:1;max-width:640px;position:relative;z-index:1;padding-block:52px}
-.split .photo{position:absolute;top:0;bottom:0;right:0;width:46%;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)}
-.split .photo img{width:100%;height:100%;object-fit:cover;filter:sepia(.18)}
-
-/* Amenities */
-.grow{background:var(--paper)}
-.grow .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;align-items:stretch;padding-block:56px}
-.features .stack{gap:8px;margin-bottom:22px}
-.feat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:0;padding:0;list-style:none}
-.feat-grid li{background:var(--paper);padding:13px 14px;display:flex;align-items:center;gap:14px;font-size:.92rem;line-height:1.35;color:var(--ink)}
-.feat-grid svg{flex:none;width:34px;height:34px;fill:none;stroke:var(--mahogany);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.grow .render{border-radius:12px;overflow:hidden;min-height:320px}
-.grow .render img{width:100%;height:100%;object-fit:cover;filter:sepia(.18)}
+/* Halls 16, 17 & 18: centred heading, highlighted line, story + Key Amenities side by side */
+.halls{background:var(--paper)}
+.halls .wrap{padding-block:56px}
+.halls-head{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.halls-head h2{font-size:clamp(1.6rem,1.1rem + 1.9vw,2.3rem)}
+.halls-head h2::after{content:"";display:block;width:56px;height:3px;background:var(--mahogany);margin:14px auto 0}
+.halls-stat{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:0 .4em;padding:14px clamp(20px,3vw,40px);border-radius:14px;background:var(--mahogany);color:#fff;font-family:var(--display);font-weight:900;font-size:clamp(1.25rem,.9rem + 1.7vw,2.1rem);line-height:1.25;box-shadow:0 12px 28px rgba(110,31,22,.22)}
+.halls-stat strong{color:var(--gold);font-variant-numeric:tabular-nums}
+.halls-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,3.5vw,56px);align-items:stretch;margin-top:40px}
+.halls-story{display:flex;flex-direction:column;gap:14px}
+.halls-story p{font-size:clamp(1.0625rem,1rem + .3vw,1.1875rem);max-width:66ch}
+.halls-story .render{flex:1;min-height:260px;margin-top:8px;border-radius:12px;overflow:hidden}
+.halls-story .render img{width:100%;height:100%;object-fit:cover;filter:sepia(.18)}
+.features{background:var(--cream);border:1px solid var(--line);border-top:3px solid var(--mahogany);border-radius:14px;padding:clamp(18px,2vw,28px);scroll-margin-top:96px;display:flex;flex-direction:column}
+.features .feat-grid{flex:1;grid-auto-rows:1fr}
+.features h3{font-size:clamp(1.2rem,1rem + .8vw,1.5rem);color:var(--navy);font-weight:700;margin:4px 0 16px}
+.feat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.feat-grid li{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px;font-size:1.02rem;line-height:1.4;color:var(--ink)}
+.feat-grid svg{flex:none;width:32px;height:32px;fill:none;stroke:var(--mahogany);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 
 /* Naming */
 .naming{background:var(--cream)}
@@ -155,18 +161,17 @@ section,footer{overflow-x:clip}
 .naming h2{margin-top:6px}
 .naming .copy{margin:12px auto 0;max-width:none}
 @media (min-width:860px){.one-line{white-space:nowrap}}
-.costbar{display:grid;grid-template-columns:auto auto minmax(0,1fr);margin:28px 0 0;padding:0;background:var(--mahogany);color:#fff;border-radius:10px;text-align:left}
-.costbar div{padding:16px 24px;border-left:1.5px solid rgba(244,201,139,.4)}
+.costbar{display:grid;grid-template-columns:auto auto minmax(0,1fr);margin:28px 0 0;padding:0;background:var(--mahogany);color:#fff;border-radius:12px;text-align:left}
+.costbar div{padding:20px clamp(20px,2.4vw,36px);border-left:1.5px solid rgba(255,255,255,.45)}
 .costbar div:first-child{border-left:0}
-.costbar dt{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700}
-.costbar dd{margin:2px 0 0;font-family:var(--display);font-weight:700;font-size:1.08rem;line-height:1.3}
+.costbar dt{font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;font-weight:900}
+.costbar dd{margin:4px 0 0;font-family:var(--display);font-weight:700;font-size:clamp(1.15rem,1rem + .5vw,1.35rem);line-height:1.3}
 .tiers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:18px 0 0;padding:0;list-style:none}
-.tiers li{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:26px 18px 20px;display:flex;flex-direction:column;gap:4px;align-items:center}
+.tiers li{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:26px 18px 24px;display:flex;flex-direction:column;gap:4px;align-items:center}
 .tiers .amt{font-family:var(--display);font-weight:900;color:var(--mahogany);font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
-.tiers .usd{font-size:.82rem;color:var(--muted)}
-.tiers h3{margin-top:10px;font-size:1rem;color:var(--navy);font-weight:700}
-.tiers p{font-size:.92rem;line-height:1.45;max-width:24ch}
-.tier-link{margin-top:auto;padding-top:12px;font-family:var(--display);font-weight:700;font-size:.88rem;color:var(--mahogany);text-underline-offset:3px}
+.tiers .usd{font-size:.9rem;color:var(--muted)}
+.tiers h3{margin-top:10px;font-size:1.1rem;color:var(--navy);font-weight:700}
+.tiers p{font-size:1.02rem;line-height:1.5;max-width:26ch}
 
 /* Closing band */
 .closing{background:var(--mahogany-deep);color:#fff;position:relative;overflow:hidden}
@@ -184,10 +189,8 @@ section,footer{overflow-x:clip}
   .feat-grid li:hover{background:var(--champagne)}
   .cards li,.tiers li{transition:transform .25s,box-shadow .25s}
   .cards li:hover,.tiers li:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(110,31,22,.16)}
-  .tier-link{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;text-decoration:none;transition:background-size .25s}
-  .tiers li:hover .tier-link,.tier-link:hover{background-size:100% 1.5px}
-  .split .photo img,.grow .render img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
-  .split .photo:hover img,.grow .render:hover img{transform:scale(1.05)}
+  .h15-photo img,.halls-story .render img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+  .h15-photo:hover img,.halls-story .render:hover img{transform:scale(1.05)}
   .navbar-logo{transition:opacity .2s}
   .navbar-brand:hover .navbar-logo{opacity:.75}
 }
@@ -200,13 +203,12 @@ section,footer{overflow-x:clip}
   .collage{height:auto;aspect-ratio:16/10}
   .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
   .tiers{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .grow .wrap{grid-template-columns:minmax(0,1fr);gap:28px}
-  .grow .render{min-height:0;aspect-ratio:16/9}
-  .split .wrap{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
-  .split .text{max-width:none;padding-block:40px 26px}
-  .split .photo{position:static;width:auto;clip-path:none;aspect-ratio:16/8;margin-inline:calc(-1 * max(var(--gutter),env(safe-area-inset-left,0px)))}
+  .hall15 .wrap{grid-template-columns:minmax(0,1fr);gap:24px}
+  .halls-grid{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:30px}
+  .halls-story .render{flex:none;min-height:0;aspect-ratio:16/9}
+  .features .feat-grid{grid-auto-rows:auto}
   .costbar{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .costbar div:last-child{grid-column:1/-1;border-left:0;border-top:1.5px solid rgba(244,201,139,.4)}
+  .costbar div:last-child{grid-column:1/-1;border-left:0;border-top:1.5px solid rgba(255,255,255,.45)}
 }
 @media (max-width:640px){.lead-card iframe{height:800px}}
 /* Phone */
@@ -218,10 +220,12 @@ section,footer{overflow-x:clip}
   .hero .wrap{align-items:flex-start;min-height:430px;padding-block:28px 190px}
   .hero-bg{object-position:60% 100%}
   .hero h1::after{margin-top:12px}
-  .foundation .wrap,.hall15 .wrap,.grow .wrap,.naming .wrap{padding-block:40px}
-  .challenge-title{margin-top:32px;padding-top:28px}
-  .hall15 .wrap{grid-template-columns:minmax(0,1fr);gap:24px}
-  .hall15 .stat{border-right:0;padding:0 0 24px;border-bottom:1.5px solid rgba(255,255,255,.55)}
+  .foundation .wrap,.hall15 .wrap,.halls .wrap,.naming .wrap{padding-block:40px}
+  .challenge-title{margin-top:32px}
+  .found-head{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:18px}
+  .found-mark{width:104px}
+  .found-sub::after{margin-inline:auto}
+  .halls-stat{flex-direction:column;border-radius:12px}
   .closing .wrap{padding-block:44px calc(92px + env(safe-area-inset-bottom,0px))}
   .closing .btn{white-space:normal;text-align:center}
   .sticky-cta{display:flex;position:fixed;z-index:55;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));box-shadow:0 10px 26px rgba(60,20,10,.4)}
@@ -229,7 +233,7 @@ section,footer{overflow-x:clip}
 @media (max-width:520px){
   .cards,.tiers,.feat-grid{grid-template-columns:minmax(0,1fr)}
   .costbar{grid-template-columns:minmax(0,1fr)}
-  .costbar div{border-left:0;border-top:1.5px solid rgba(244,201,139,.4)}
+  .costbar div{border-left:0;border-top:1.5px solid rgba(255,255,255,.45)}
   .costbar div:first-child{border-top:0}
   .collage{aspect-ratio:4/3}
 }
@@ -253,7 +257,6 @@ section,footer{overflow-x:clip}
   <img class="hero-bg" src="images/hall-11-aerial.jpg" alt="A hall of residence at IIT Kanpur, seen from above its green courtyard" fetchpriority="high">
   <div class="wrap">
     <div class="intro-text">
-      <p class="eyebrow">Halls 16, 17 &amp; 18</p>
       <h1><span>The Halls That Hold Our Memories.</span><span>The Halls That Will Shape Their Future.</span></h1>
     </div>
   </div>
@@ -285,9 +288,12 @@ section,footer{overflow-x:clip}
 <section class="foundation" id="foundation">
   <div class="wrap">
     <div class="found-head" data-aos="fade-up">
-      <p class="eyebrow">Greater Than Us &middot; Foundation: The Ground We Build On</p>
-      <h2 class="red">Strengthening the Foundation of IIT Kanpur</h2>
-      <p class="lead"><span>Foundation is the first strategic priority of Greater Than Us, strengthening the essential infrastructure behind the Institute’s growth.</span> <span>Today, its most pressing need is student housing.</span></p>
+      <img class="found-mark" src="images/gtu-mark-white.png" alt="Greater Than Us" width="480" height="480" loading="lazy">
+      <div class="found-text">
+        <h2>Strengthening the Foundation of IIT Kanpur</h2>
+        <p class="found-sub">Greater Than Us - Foundation: The Ground We Build On</p>
+      </div>
+      <p class="lead">Foundation is the first strategic priority of Greater Than Us, strengthening the essential infrastructure behind the Institute’s growth. Today, its most pressing need is student housing.</p>
     </div>
     <h3 class="challenge-title" data-aos="fade-up">The home we knew is running out of room</h3>
     <ul class="cards">
@@ -302,49 +308,48 @@ section,footer{overflow-x:clip}
 
 <section class="hall15" id="hall15">
   <div class="wrap">
-    <p class="stat" data-aos="fade-right"><span class="num">976</span><span>women students will call Hall 15 home</span></p>
+    <figure class="h15-photo" data-aos="fade-right">
+      <img src="images/halls-front.jpg" alt="Architect's rendering of Halls 16, 17 and 18, seen from the approach road" loading="lazy">
+    </figure>
     <div class="stack" data-aos="fade-left">
       <p class="eyebrow">From One Generation to the Next</p>
-      <h2>Hall 15 shows what we can do together</h2>
+      <h2 class="red rule">Hall 15 shows what we can do together</h2>
+      <p class="h15-fact">976 women students will call Hall 15 home</p>
       <p>Hall 15, IIT Kanpur’s new residential hall for women, is nearing completion, made possible by the support of our alumni. It is a testament to what this community can achieve when it comes together for its students.</p>
       <p class="next">Hall 15 is the beginning. Halls 16, 17 and 18 are next.</p>
     </div>
   </div>
 </section>
 
-<section class="split" id="halls">
+<section class="halls" id="halls">
   <div class="wrap">
-    <div class="text stack" data-aos="fade-right">
-      <h2 class="red rule">Building for the Future: Halls 16, 17 &amp; 18</h2>
-      <p class="lede">Three new halls. Home to 3,000+ students.</p>
-      <p>Designed around comfort, community living and sustainability, Halls 16, 17 and 18 will give future IITians a place to learn, connect and thrive.</p>
-      <p>Solar energy, rainwater harvesting, water reuse, natural light and green landscaping are built into the design, making the halls efficient and future-ready.</p>
+    <div class="halls-head" data-aos="fade-up">
+      <h2 class="red">Building for the Future: Halls 16, 17 &amp; 18</h2>
+      <p class="halls-stat"><span>Three new halls.</span> <span>Home to <strong>3,000+</strong> students.</span></p>
     </div>
-    <div class="photo" data-aos="fade-left"><img src="images/halls-front.jpg" alt="Architect's rendering of Halls 16, 17 and 18, seen from the approach road" loading="lazy"></div>
-  </div>
-</section>
-
-<section class="grow" id="amenities">
-  <div class="wrap">
-    <div class="features" data-aos="fade-up">
-      <div class="stack">
-        <p class="eyebrow">Key Amenities</p>
-        <h2>Built for the way students live today</h2>
+    <div class="halls-grid">
+      <div class="halls-story" data-aos="fade-right">
+        <p>Designed around comfort, community living and sustainability, Halls 16, 17 and 18 will give future IITians a place to learn, connect and thrive.</p>
+        <p>Solar energy, rainwater harvesting, water reuse, natural light and green landscaping are built into the design, making the halls efficient and future-ready.</p>
+        <div class="render"><img src="images/halls-aerial-1.jpg" alt="Aerial rendering of the four residential towers and supporting blocks" loading="lazy"></div>
       </div>
-      <ul class="feat-grid">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="8" rx="2"/><path d="M6.5 10h11M8 16v2M12 16v3M16 16v2"/></svg><span>Centralised AC rooms, ergonomic furniture, personal storage</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 15.8a5 5 0 0 1 6.8 0"/><circle cx="12" cy="19" r=".9"/></svg><span>High-speed Wi-Fi throughout the hall of residence</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a2 2 0 0 0 4 0V3M8 3v18M17 3c-2 2-3 5-3 8h3v10"/></svg><span>Dining &amp; Canteen Facilities</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13.5" r="4.2"/><path d="M7 6.5h.01M10 6.5h.01"/></svg><span>Laundry facilities with drying rooms</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h5.5A2.5 2.5 0 0 1 11 7.500V20a2 2 0 0 0-2-2H3zM21 5h-5.500A2.5 2.5 0 0 0 13 7.500V20a2 2 0 0 1 2-2h6z"/></svg><span>Study Rooms &amp; Workspaces for quiet academic focus</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5.5" r="2.3"/><path d="M5.5 8l6.5 3 6.5-3M12 11v5M8.5 21l3.5-5 3.5 5"/></svg><span>Recreation Areas</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3zM6 18v2M18 18v2"/></svg><span>Smart Lounges with social &amp; collaborative spaces</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 16.500h18M5.5 11V7.500a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2V11"/></svg><span>Guest Rooms for parents and visitors</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M12 8.500c1.6 1.5 2.6 2.9 2.6 4.400a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.6 1-2.2.2 1 .7 1.3 1 1.2-.300-1.2 0-2.3.600-3.400z"/></svg><span>Fire &amp; Safety Compliance</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="1.7"/><path d="M5 8.500l7 1.5 7-1.500M12 10v5M9 21l3-6 3 6"/></svg><span>Accessibility-friendly design</span></li>
-      </ul>
+      <div class="features" id="amenities" data-aos="fade-left">
+        <p class="eyebrow">Key Amenities</p>
+        <h3>Built for the way students live today</h3>
+        <ul class="feat-grid">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="8" rx="2"/><path d="M6.5 10h11M8 16v2M12 16v3M16 16v2"/></svg><span>Centralised AC rooms, ergonomic furniture, personal storage</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 15.8a5 5 0 0 1 6.8 0"/><circle cx="12" cy="19" r=".9"/></svg><span>High-speed Wi-Fi throughout the hall of residence</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a2 2 0 0 0 4 0V3M8 3v18M17 3c-2 2-3 5-3 8h3v10"/></svg><span>Dining &amp; Canteen Facilities</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13.5" r="4.2"/><path d="M7 6.5h.01M10 6.5h.01"/></svg><span>Laundry facilities with drying rooms</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h5.5A2.5 2.5 0 0 1 11 7.500V20a2 2 0 0 0-2-2H3zM21 5h-5.500A2.5 2.5 0 0 0 13 7.500V20a2 2 0 0 1 2-2h6z"/></svg><span>Study Rooms &amp; Workspaces for quiet academic focus</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5.5" r="2.3"/><path d="M5.5 8l6.5 3 6.5-3M12 11v5M8.5 21l3.5-5 3.5 5"/></svg><span>Recreation Areas</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3zM6 18v2M18 18v2"/></svg><span>Smart Lounges with social &amp; collaborative spaces</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 16.500h18M5.5 11V7.500a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2V11"/></svg><span>Guest Rooms for parents and visitors</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M12 8.500c1.6 1.5 2.6 2.9 2.6 4.400a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.6 1-2.2.2 1 .7 1.3 1 1.2-.300-1.2 0-2.3.600-3.400z"/></svg><span>Fire &amp; Safety Compliance</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="1.7"/><path d="M5 8.500l7 1.5 7-1.500M12 10v5M9 21l3-6 3 6"/></svg><span>Accessibility-friendly design</span></li>
+        </ul>
+      </div>
     </div>
-    <div class="render" data-aos="fade-up"><img src="images/halls-aerial-1.jpg" alt="Aerial rendering of the four residential towers and supporting blocks" loading="lazy"></div>
   </div>
 </section>
 
@@ -359,10 +364,10 @@ section,footer{overflow-x:clip}
       <div><dt>Shared spaces</dt><dd>Cafeteria, guest rooms, meeting rooms and common facilities</dd></div>
     </dl>
     <ul class="tiers">
-      <li data-aos="fade-up" data-aos-delay="0"><span class="amt">₹60 Crore</span><span class="usd">approx. USD 6.4M</span><h3>Hall of Residence Naming</h3><p>A defining contribution to IITK’s residential legacy.</p><a class="tier-link" href="#connect" data-open-form>Enquire</a></li>
-      <li data-aos="fade-up" data-aos-delay="100"><span class="amt">₹15 Crore</span><span class="usd">approx. USD 1.6M</span><h3>Tower Naming</h3><p>A lasting association with a residential tower.</p><a class="tier-link" href="#connect" data-open-form>Enquire</a></li>
-      <li data-aos="fade-up" data-aos-delay="200"><span class="amt">₹2 Crore</span><span class="usd">approx. USD 0.21M</span><h3>Floor Naming</h3><p>A space that will be part of everyday student life.</p><a class="tier-link" href="#connect" data-open-form>Enquire</a></li>
-      <li data-aos="fade-up" data-aos-delay="300"><span class="amt">₹10 Lakh</span><span class="usd">approx. USD 10.6K</span><h3>Room Naming</h3><p>A personal connection with a future IITian’s home.</p><a class="tier-link" href="#connect" data-open-form>Enquire</a></li>
+      <li data-aos="fade-up" data-aos-delay="0"><span class="amt">₹60 Crore</span><span class="usd">approx. USD 6.4M</span><h3>Hall of Residence Naming</h3><p>A defining contribution to IITK’s residential legacy.</p></li>
+      <li data-aos="fade-up" data-aos-delay="100"><span class="amt">₹15 Crore</span><span class="usd">approx. USD 1.6M</span><h3>Tower Naming</h3><p>A lasting association with a residential tower.</p></li>
+      <li data-aos="fade-up" data-aos-delay="200"><span class="amt">₹2 Crore</span><span class="usd">approx. USD 0.21M</span><h3>Floor Naming</h3><p>A space that will be part of everyday student life.</p></li>
+      <li data-aos="fade-up" data-aos-delay="300"><span class="amt">₹10 Lakh</span><span class="usd">approx. USD 10.6K</span><h3>Room Naming</h3><p>A personal connection with a future IITian’s home.</p></li>
     </ul>
   </div>
 </section>
@@ -444,19 +449,33 @@ section,footer{overflow-x:clip}
     $$('[data-aos]').forEach(function(el){el.removeAttribute('data-aos')});
   }
 
-  /* 5. GSAP: banner entrance, gentle banner parallax, Hall 15 count-up. All use from/to tweens, so the page reads normally without GSAP. */
+  /* 5. GSAP: banner entrance with word-by-word headline, gentle banner parallax. All use from/to tweens, so the page reads normally without GSAP. */
   if(window.gsap&&!calm){
     gsap.from('.hero-bg',{scale:1.08,duration:1.8,ease:'power2.out'});
-    gsap.from('.hero .eyebrow, .hero h1 span',{y:28,opacity:0,duration:.8,stagger:.16,ease:'power3.out',delay:.15});
+    /* Headline: split each line into words (screen readers still get the full sentence), then slide the words up one after another and draw the rule. */
+    var h1=doc.querySelector('.hero h1'),tl;
+    if(h1){
+      h1.setAttribute('aria-label',$$('.hero h1>span').map(function(l){return l.textContent.trim()}).join(' '));
+      $$('.hero h1>span').forEach(function(line){
+        var words=line.textContent.trim().split(/\s+/);
+        line.textContent='';line.setAttribute('aria-hidden','true');
+        words.forEach(function(w,i){
+          var box=doc.createElement('span'),inner=doc.createElement('span');
+          box.className='w';inner.className='wi';inner.textContent=w;box.appendChild(inner);
+          line.appendChild(box);
+          if(i<words.length-1)line.appendChild(doc.createTextNode(' '));
+        });
+      });
+      tl=gsap.timeline({delay:.25});
+      tl.from('.hero h1>span:first-child .wi',{yPercent:115,opacity:0,duration:.75,stagger:.08,ease:'power3.out'})
+        .from('.hero h1>span:last-child .wi',{yPercent:115,opacity:0,duration:.75,stagger:.08,ease:'power3.out'},'-=.35')
+        .fromTo(h1,{'--rule':0},{'--rule':1,duration:.6,ease:'power2.out'},'-=.3');
+    }
     if(window.ScrollTrigger){
       gsap.registerPlugin(ScrollTrigger);
       gsap.to('.hero-bg',{yPercent:10,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
-      var num=doc.querySelector('.hall15 .num');
-      if(num){
-        var end=parseInt(num.textContent,10),o={v:0};
-        gsap.to(o,{v:end,duration:1.6,ease:'power2.out',scrollTrigger:{trigger:num,start:'top 85%',once:true},
-          onStart:function(){num.textContent='0'},onUpdate:function(){num.textContent=Math.round(o.v)},onComplete:function(){num.textContent=end}});
-      }
+      /* Replay the headline each time the visitor scrolls back up to the banner. */
+      if(h1&&tl)ScrollTrigger.create({trigger:h1,start:'top bottom',end:'bottom top+=90',onEnterBack:function(){tl.restart()}});
     }
   }
 })();
